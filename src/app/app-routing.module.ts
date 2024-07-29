@@ -10,10 +10,10 @@ const routes: Routes = [
     path: 'favorite',
     loadChildren: () => import('./routes/favorite/favorite.module').then(m => m.FavoriteModule)
   },
-  // {
-  //   path: 'tab2',
-  //   loadChildren: () => import('./tab2/tab2.module').then(m => m.Tab2PageModule)
-  // },
+  {
+    path: 'auth',
+    loadChildren: () => import('./routes/auth/auth.module').then(m => m.AuthModule)
+  },
   // {
   //   path: 'tab3',
   //   loadChildren: () => import('./tab3/tab3.module').then(m => m.Tab3PageModule)
@@ -24,7 +24,7 @@ const routes: Routes = [
   // },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'auth',
     pathMatch: 'full'
   },
 ];
