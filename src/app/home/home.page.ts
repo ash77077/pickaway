@@ -8,5 +8,13 @@ import { Component } from '@angular/core';
 export class HomePage {
 
   constructor() {}
+  count = 0;
 
+  increment() {
+    this.count++;
+  }
+
+  decrement() {
+    this.count--;
+  }
 }
