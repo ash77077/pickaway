@@ -1,0 +1,7 @@
+{
+  "name": "pickaway",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
