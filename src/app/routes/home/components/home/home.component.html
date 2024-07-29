@@ -1,0 +1,21 @@
+<div class="ion-page">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>App</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <p>You can interact with the +/- buttons until the sheet is fully expanded.</p>
+    <div class="counter__section">
+      <ion-button (click)="decrement()">-</ion-button>
+      <p>{{ count }}</p>
+      <ion-button (click)="increment()">+</ion-button>
+    </div>
+    <ion-button (click)="openModal()">Open Modal</ion-button>
+    <ion-modal [trigger]="''"></ion-modal>
+    <h1>{{ 'HELLO' | translate }}</h1>
+    <p>{{ 'WELCOME' | translate }}</p>
+    <ion-button (click)="changeLanguage('hy')">Change to Spanish</ion-button>
+    <ion-button (click)="changeLanguage('en')">Change to English</ion-button>
+  </ion-content>
+</div>
