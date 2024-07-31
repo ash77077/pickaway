@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { UserService } from 'src/app/core/services/user.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,16 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  public isLoginPage: boolean = false;
+
+  constructor(
+    private router: Router,
+    public userService: UserService,
+    ) {
+    router.events.pipe(takeUntilDestroyed()).subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.isLoginPage = !['/auth/sign-in', '/auth/sign-up', '/auth/set-password'].includes(this.router.url);
+      }
+    });
+  }
 }
