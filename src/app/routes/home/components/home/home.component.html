@@ -1,28 +1,20 @@
 <div class="ion-page">
   <ion-content class="ion-padding">
-    <p>You can interact with the +/- buttons until the sheet is fully expanded.</p>
-    <div class="counter__section">
-      <ion-button (click)="decrement()">-</ion-button>
-      <p>{{ count }}</p>
-      <ion-button (click)="increment()">+</ion-button>
-    </div>
+    <swiper-container slides-per-view="2.5" speed="500" css-mode="true">
+      <swiper-slide *ngFor="let item of [1,2,3,4,5,6,7,8,9]">
+        <ion-card>
+          <img alt="Silhouette of mountains" src="data:image/jpeg;base64,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"/>
+          <ion-card-header>
+            <ion-card-subtitle>{{ item }}</ion-card-subtitle>
+          </ion-card-header>
+        </ion-card>
+      </swiper-slide>
+    </swiper-container>
     <ion-button (click)="openModal()">Open Modal</ion-button>
     <ion-modal [trigger]="''"></ion-modal>
-    <h1>{{ 'HELLO' | translate }}</h1>
-    <p>{{ 'WELCOME' | translate }}</p>
-    <ion-button (click)="changeLanguage('hy')">Change to Spanish</ion-button>
-    <ion-button (click)="changeLanguage('en')">Change to English</ion-button>
+    <div class="container">
+      <div class="circle"></div>
+      <h4>Coffee House</h4>
+    </div>
   </ion-content>
 </div>
-
-
-<ion-app>
-<!--  <ion-menu contentId="main-content">-->
-<!--    <ion-header>-->
-<!--      <ion-toolbar color="tertiary">-->
-<!--        <ion-title>Menu Content</ion-title>-->
-<!--      </ion-toolbar>-->
-<!--    </ion-header>-->
-<!--    <ion-content class="ion-padding">This is the menu content.</ion-content>-->
-<!--  </ion-menu>-->
-</ion-app>

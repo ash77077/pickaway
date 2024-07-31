@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
+import { register } from 'swiper/element/bundle';
 import { NavigationEnd, Router } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { UserService } from 'src/app/core/services/user.service';
+
+register();
 
 @Component({
   selector: 'app-root',

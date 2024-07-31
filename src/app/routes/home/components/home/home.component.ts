@@ -10,21 +10,12 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class HomeComponent {
   protected readonly modalComponent = OrderComponent;
-  public count: number = 0;
 
   constructor(
     private modalController: ModalController,
     private translate: TranslateService
   ) {
     this.translate.setDefaultLang('en');
-  }
-
-  increment(): void {
-    this.count++;
-  }
-
-  decrement(): void {
-    this.count--;
   }
 
   async openModal(): Promise<void> {

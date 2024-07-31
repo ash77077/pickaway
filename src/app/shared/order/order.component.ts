@@ -6,7 +6,8 @@ import { ModalController } from '@ionic/angular';
   templateUrl: './order.component.html',
   styleUrls: ['./order.component.scss'],
 })
-export class OrderComponent   {
+export class OrderComponent {
+  public count: number = 0;
 
   constructor(private modalController: ModalController) { }
 
@@ -14,4 +15,12 @@ export class OrderComponent   {
     this.modalController.dismiss();
   }
 
+
+  increment(): void {
+    this.count++;
+  }
+
+  decrement(): void {
+    this.count--;
+  }
 }
