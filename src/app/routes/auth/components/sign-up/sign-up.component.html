@@ -5,20 +5,20 @@
 </ion-header>
 
 <ion-content>
-  <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+  <form [formGroup]="registerForm">
     <ion-item>
       <ion-label position="floating">First name</ion-label>
-      <ion-input formControlName="first_name" type="email"></ion-input>
+      <ion-input formControlName="firstName" type="email"></ion-input>
     </ion-item>
-    <ion-item *ngIf="registerForm.get('first_name').invalid && registerForm.get('first_name').touched">
+    <ion-item *ngIf="registerForm.get('firstName').invalid && registerForm.get('firstName').touched">
       <ion-note color="danger">First name is required</ion-note>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating">Last name</ion-label>
-      <ion-input formControlName="last_name" type="email"></ion-input>
+      <ion-input formControlName="lastName" type="email"></ion-input>
     </ion-item>
-    <ion-item *ngIf="registerForm.get('last_name').invalid && registerForm.get('last_name').touched">
+    <ion-item *ngIf="registerForm.get('lastName').invalid && registerForm.get('lastName').touched">
       <ion-note color="danger">Last name is required</ion-note>
     </ion-item>
 
@@ -46,7 +46,7 @@
       <ion-note color="danger">Passwords must match</ion-note>
     </ion-item>
 
-    <ion-button expand="full" type="submit" [disabled]="registerForm.invalid">Register</ion-button>
+    <ion-button expand="full" (click)="onRegister()">Register</ion-button>
   </form>
 
   <ion-button expand="full" routerLink="../sign-in">Login</ion-button>

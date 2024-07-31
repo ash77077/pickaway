@@ -6,10 +6,16 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import {
+  HttpClient,
+  HttpClientModule,
+  provideHttpClient,
+  withInterceptors
+} from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { createTranslateLoader } from 'src/app/core/translation/app.translate-loader';
 import { IonicStorageModule } from '@ionic/storage-angular';
+import { AuthInterceptor } from 'src/app/core/interceptors/auth.interceptor';
 
 @NgModule({
   declarations: [AppComponent],
@@ -27,7 +33,10 @@ import { IonicStorageModule } from '@ionic/storage-angular';
     }),
     IonicStorageModule.forRoot()
   ],
-  providers: [{provide: RouteReuseStrategy, useClass: IonicRouteStrategy}],
+  providers: [
+    {provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
+    provideHttpClient(withInterceptors([AuthInterceptor]))
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
