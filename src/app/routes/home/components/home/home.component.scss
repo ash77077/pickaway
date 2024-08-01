@@ -12,3 +12,43 @@
     margin-top: 20px;
   }
 }
+
+ion-card {
+  margin-inline-start: 0;
+  margin-inline-end: 8px;
+  margin-top: 0;
+  margin-bottom: 5px;
+  opacity: .8;
+}
+
+.rounded-card {
+  border-radius: 50%; /* Adjust the value as needed */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    aspect-ratio: 1/1;
+    filter: blur(1px);
+  }
+}
+
+.active-store {
+  opacity: 1;
+
+  img {
+    filter: blur(0);
+  }
+}
+
+.store_see-all {
+  display: flex;
+  justify-content: space-between;
+  margin: 4px 0;
+  padding: 0 4px;
+
+  .see-all {
+    color: dodgerblue;
+  }
+}

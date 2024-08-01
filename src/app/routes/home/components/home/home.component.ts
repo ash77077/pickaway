@@ -21,7 +21,7 @@ export class HomeComponent {
   async openModal(): Promise<void> {
     const modal = await this.modalController.create({
       component: this.modalComponent,
-      breakpoints: [0.5, 0.75],
+      breakpoints: [0.1, 0.5, 0.99],
       initialBreakpoint: 0.5,
       backdropDismiss: false,
       backdropBreakpoint: 0.5
@@ -31,5 +31,9 @@ export class HomeComponent {
 
   changeLanguage(lang: string): void {
     this.translate.use(lang);
+  }
+
+  public openStore(item: any): void {
+
   }
 }

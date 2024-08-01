@@ -1,5 +1,5 @@
 <ion-app>
-  <ion-header *ngIf="isLoginPage">
+  <ion-header *ngIf="!isLoginPage">
     <ion-toolbar>
       <ion-menu-button></ion-menu-button>
       <ion-buttons slot="start">
@@ -8,7 +8,7 @@
       <ion-title>My App</ion-title>
       <ion-buttons slot="end">
         <ion-button >
-          <ion-icon name="language-outline"></ion-icon>
+          <ion-icon name="cart-outline"></ion-icon>
         </ion-button>
       </ion-buttons>
     </ion-toolbar>
@@ -19,7 +19,6 @@
       <ion-tab-bar slot="bottom">
         <ion-tab-button tab="home">
           <ion-icon name="home"></ion-icon>
-          <ion-label>Home</ion-label>
         </ion-tab-button>
 
         <ion-tab-button tab="favorite">

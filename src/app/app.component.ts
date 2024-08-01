@@ -20,7 +20,7 @@ export class AppComponent {
     ) {
     router.events.pipe(takeUntilDestroyed()).subscribe(event => {
       if (event instanceof NavigationEnd) {
-        this.isLoginPage = !['/auth/sign-in', '/auth/sign-up', '/auth/set-password'].includes(this.router.url);
+        this.isLoginPage = ['/auth/sign-in', '/auth/sign-up'].includes(this.router.url) || this.router.url.includes('/auth/activate');
       }
     });
   }
