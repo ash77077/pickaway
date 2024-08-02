@@ -8,13 +8,13 @@ import {TranslateModule} from "@ngx-translate/core";
 
 @NgModule({
   declarations: [StorePageComponent],
-  exports: [
-    StorePageComponent
-  ],
     imports: [
         CommonModule,
         IonicModule,
         TranslateModule
-    ]
+    ],
+  exports: [
+    StorePageComponent
+  ],
 })
 export class StorePageModule { }
