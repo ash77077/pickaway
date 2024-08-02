@@ -7,17 +7,19 @@ import { HomeComponent } from 'src/app/routes/home/components/home/home.componen
 import { HomePageRoutingModule } from './home-routing.module';
 import { OrderModule } from 'src/app/shared/order/order.module';
 import { TranslateModule } from '@ngx-translate/core';
+import {StorePageModule} from "../../shared/store-page/store-page.module";
 
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    HomePageRoutingModule,
-    OrderModule,
-    TranslateModule
-  ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        HomePageRoutingModule,
+        OrderModule,
+        TranslateModule,
+        StorePageModule
+    ],
   declarations: [HomeComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

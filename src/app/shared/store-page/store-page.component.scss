@@ -1,0 +1,71 @@
+.store-cover-img {
+  position: relative;
+
+  .rate {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    backdrop-filter: blur(5px);
+
+    ion-icon {
+      color: yellow;
+    }
+
+    span {
+      font-weight: bold;
+      color: white;
+    }
+  }
+
+  .work-time {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    font-weight: bold;
+    color: white;
+    backdrop-filter: blur(5px);
+  }
+}
+
+.filter-btn-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 8px;
+
+  .filter-btn {
+    width: 100%;
+  }
+}
+
+.store-address {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  border: 1px solid #c3c3c3;
+  border-radius: 5px;
+  margin-top: 16px;
+}
+
+.selected-address {
+  font-weight: bold;
+}
+
+.product-list {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-row-gap: 20px;
+}
+
+ion-card {
+  margin-inline-start: 0;
+  margin-inline-end: 8px;
+  margin-top: 0;
+  margin-bottom: 5px;
+
+  ion-card-header {
+    padding-inline: 5px;
+  }
+}

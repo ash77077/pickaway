@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
-import { OrderComponent } from 'src/app/shared/order/order.component';
-import { ModalController } from '@ionic/angular';
-import { TranslateService } from '@ngx-translate/core';
+import {Component} from '@angular/core';
+import {OrderComponent} from 'src/app/shared/order/order.component';
+import {ModalController} from '@ionic/angular';
+import {TranslateService} from '@ngx-translate/core';
+import {STORES_BY_PRODUCTS} from "../../../../core/constants/app.mock";
 
 @Component({
   selector: 'app-home',
@@ -10,6 +11,8 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class HomeComponent {
   protected readonly modalComponent = OrderComponent;
+  protected readonly STORES_BY_PRODUCTS = STORES_BY_PRODUCTS;
+  public isHome: boolean = true;
 
   constructor(
     private modalController: ModalController,
@@ -34,6 +37,6 @@ export class HomeComponent {
   }
 
   public openStore(item: any): void {
-
+    this.isHome = !this.isHome;
   }
 }
