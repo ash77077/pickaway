@@ -46,10 +46,13 @@
         <ion-title>Choose Address</ion-title>
       </ion-toolbar>
       <ion-list>
-        <div style="height: 52vh; overflow: auto">
+        <div class="modal-config">
           <ion-item *ngFor="let item of addresses">
             <ion-label (click)="selectAddress(item)">
-              <p style="color: black" [ngClass]="{'selected-address': item.selected}">{{ item.address }}</p>
+              <div class="branches-list">
+                <div [ngClass]="{'selected-address': item.selected}">{{ item.address }}</div>
+                <p>{{ item.time }}</p>
+              </div>
             </ion-label>
           </ion-item>
         </div>

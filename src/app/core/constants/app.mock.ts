@@ -51,7 +51,25 @@ export const STORES_BY_PRODUCTS = [
         isFavorite: true,
         price: 1600,
         currency: 'AMD'
-      }
+      },
+      {
+        id: 4,
+        name: 'Raf',
+        subName: '',
+        img: '',
+        isFavorite: false,
+        price: 1200,
+        currency: 'AMD'
+      },
+      {
+        id: 1,
+        name: 'Smoothie',
+        subName: '',
+        img: '',
+        isFavorite: true,
+        price: 2500,
+        currency: 'AMD'
+      },
     ],
   },
   {
