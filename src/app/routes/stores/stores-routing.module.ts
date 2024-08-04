@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {StoresComponent} from "./components/stores/stores.component";
-import {StorePageComponent} from "../../shared/store-page/store-page.component";
+import {CoffeePageComponent} from "./components/coffee-page/coffee-page.component";
 
 const routes: Routes = [
   {
@@ -9,8 +9,8 @@ const routes: Routes = [
     component: StoresComponent,
   },
   {
-    path: 'coffee/:id',
-    component: StorePageComponent,
+    path: 'product/:id',
+    component: CoffeePageComponent,
   }
 ];
 

@@ -52,7 +52,7 @@
 }
 
 .modal-config {
-  height: 52vh;
+  height: 65vh;
   overflow-y: scroll;
 }
 
@@ -62,17 +62,7 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   grid-row-gap: 20px;
-}
-
-ion-card {
-  margin-inline-start: 0;
-  margin-inline-end: 8px;
-  margin-top: 0;
-  margin-bottom: 5px;
-
-  ion-card-header {
-    padding-inline: 5px;
-  }
+  margin-left: 12px;
 }
 
 .branches-list {

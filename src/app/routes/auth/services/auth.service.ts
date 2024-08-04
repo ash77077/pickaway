@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService extends ApiService {
+  protected override baseURL: string = 'http://vmi2049167.contaboserver.net/auth/api/v1';
   public user: UserModel;
   private up: string = '';
 

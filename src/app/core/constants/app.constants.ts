@@ -27,4 +27,4 @@ export const FILTER_BTN: any[] = [
   {name: 'Others', id: 3},
 ]
 
-
+export const storeSlideCount: number = 20;

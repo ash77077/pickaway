@@ -10,6 +10,8 @@ export class StoresComponent   {
   coffees: any = STORES_BY_PRODUCTS[0].coffees
   constructor() { }
 
-
-
+  addToFavorite(e: MouseEvent, product: any) {
+    e.stopPropagation();
+    product.isFavorite = !product.isFavorite
+  }
 }

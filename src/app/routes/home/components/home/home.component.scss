@@ -14,17 +14,9 @@
   }
 }
 
-ion-card {
-  margin-inline-start: 0;
-  margin-inline-end: 8px;
-  margin-top: 0;
-  margin-bottom: 5px;
-  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);;
-  //opacity: .8;
-}
-
 .rounded-card {
-  border-radius: 50%; /* Adjust the value as needed */
+  border-radius: 50%;
+  margin-inline-end: 8px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -36,19 +28,14 @@ ion-card {
   }
 }
 
-//.active-store {
-//  opacity: 1;
-//
-//  img {
-//    filter: blur(0);
-//  }
-//}
+.active-store {
+  border: 3px solid #e05522;
+}
 
 .store_see-all {
   display: flex;
   justify-content: space-between;
   margin: 4px 0;
-  padding: 0 4px;
 
   .see-all {
     color: dodgerblue;
@@ -58,4 +45,11 @@ ion-card {
 hr {
   border-width: 1px;
   box-sizing: border-box;
+}
+
+.card-img-block {
+  position: relative;
+
+  .favorite-btn {
+  }
 }

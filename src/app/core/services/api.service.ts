@@ -7,7 +7,7 @@ import { Observable, throwError } from 'rxjs';
     providedIn: 'root',
 })
 export class ApiService {
-    protected baseURL: string = 'http://vmi2049167.contaboserver.net/auth/api/v1';
+    protected baseURL: string = '';
     protected httpClient: HttpClient;
 
     constructor(protected injector: Injector) {
