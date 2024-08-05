@@ -1,12 +1,12 @@
-import {Component, DestroyRef} from '@angular/core';
-import {OrderComponent} from 'src/app/shared/order/order.component';
-import {ModalController} from '@ionic/angular';
-import {TranslateService} from '@ngx-translate/core';
-import {STORES_BY_PRODUCTS} from "../../../../core/constants/app.mock";
-import {HomeService} from "../../services/home.service";
-import {IAddress, IStore} from "../../../../core/models/product.model";
-import {storeSlideCount} from "../../../../core/constants/app.constants";
-import {takeUntilDestroyed} from "@angular/core/rxjs-interop";
+import { Component, DestroyRef } from '@angular/core';
+import { OrderComponent } from 'src/app/shared/order/order.component';
+import { ModalController } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
+import { STORES_BY_PRODUCTS } from "src/app/core/constants/app.mock";
+import { HomeService } from "../../services/home.service";
+import { IAddress, IStore } from "src/app/core/models/product.model";
+import { storeSlideCount } from "src/app/core/constants/app.constants";
+import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
 
 @Component({
   selector: 'app-home',
@@ -51,7 +51,7 @@ export class HomeComponent {
   }
 
   public openStore(item: IStore): void {
-    this.homeService.getAddressesByStoreId(item._id).subscribe((addr: IAddress[]): void => {
+    this.homeService.getAddressesByStoreId(item.id).subscribe((addr: IAddress[]): void => {
       this.selectedStoreAddresses = addr;
       if (!this.selectedStore || this.selectedStore.id !== item.id) {
         this.selectedStore = item;
@@ -64,7 +64,7 @@ export class HomeComponent {
     })
   }
 
-  addToFavorite(e: MouseEvent, product: any) {
+  addToFavorite(e: MouseEvent, product: any): void {
     e.stopPropagation();
     product.isFavorite = !product.isFavorite
   }
