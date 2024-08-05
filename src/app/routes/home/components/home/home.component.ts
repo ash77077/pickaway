@@ -18,6 +18,7 @@ export class HomeComponent {
   public stores: IStore[]
   public isHome: boolean = true;
   public selectedStore: IStore = null;
+  public selectedStoreAddresses: IAddress[];
   private storeReqQuery: { [p: string]: string | number } = {
     limit: storeSlideCount
   }
@@ -50,7 +51,8 @@ export class HomeComponent {
   }
 
   public openStore(item: IStore): void {
-    this.homeService.getAddressesByStoreId(item.id).subscribe((addr: IAddress[]): void => {
+    this.homeService.getAddressesByStoreId(item._id).subscribe((addr: IAddress[]): void => {
+      this.selectedStoreAddresses = addr;
       if (!this.selectedStore || this.selectedStore.id !== item.id) {
         this.selectedStore = item;
         this.isHome = false;

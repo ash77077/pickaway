@@ -14,13 +14,13 @@ export class HomeService extends ApiService {
   ) {
     super(injector);
   }
-
+  // ToDo add queries
   getStores(body: any): Observable<IStore[]> {
     return this.get<IStore[]>(['stores'])
   }
 
   getAddressesByStoreId(id: string): Observable<IAddress[]> {
-    return this.get<IAddress[]>(['stores'])
+    return this.get<IAddress[]>(['address', id])
   }
 
 }

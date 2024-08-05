@@ -44,7 +44,7 @@
   [isOpen]="isAddressOpen"
   [initialBreakpoint]="0.7"
   [backdropDismiss]="false"
-  [backdropBreakpoint]="0.7"
+  [backdropBreakpoint]="0.5"
 >
   <ng-template>
     <ion-content>
@@ -52,12 +52,12 @@
         <ion-title>Choose Address</ion-title>
       </ion-toolbar>
       <ion-list>
-        <div class="modal-config">
+        <div class="modal-config" *ngIf="addresses?.length">
           <ion-item *ngFor="let item of addresses">
             <ion-label (click)="selectAddress(item)">
               <div class="branches-list">
-                <div [ngClass]="{'selected-address': item.selected}">{{ item.address }}</div>
-                <p>{{ item.time }}</p>
+                <div [ngClass]="{'selected-address': item.open}">{{ item.name }}</div>
+                <p>{{ item.workingHours }}</p>
               </div>
             </ion-label>
           </ion-item>

@@ -59,6 +59,7 @@
     </ng-container>
     <ng-template #selectedStoreHtml>
       <app-store-page
+        [addresses]="selectedStoreAddresses"
         [selectedStore]="selectedStore"
       ></app-store-page>
     </ng-template>

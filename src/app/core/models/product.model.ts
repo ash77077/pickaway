@@ -6,10 +6,11 @@ export interface IStoreByCoffees {
 }
 
 export interface IStore {
-  id: string
-  name: string
-  description: string
-  logo: string
+  id: string;
+  _id: string;
+  name: string;
+  description: string;
+  logo: string;
   rating: number;
 }
 
